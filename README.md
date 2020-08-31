@@ -2,7 +2,7 @@
 ![repo size](https://img.shields.io/badge/repo%20size-327%20MB-blue)
 
 ## Description
-The purpose of this app is create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM. I have followed the MVC design pattern; used Node and MySQL to query and route data in my app, and Handlebars to generate my HTML.
+The purpose of this app is to create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM. I have followed the MVC design pattern; used Node and MySQL to query and route data in my app, and Handlebars to generate my HTML.
 
 ## Table of contents
 
