@@ -1,0 +1,61 @@
+<h1>Eat The Burger!</h1>
+
+<div class="container">
+    <!-- Burger lists -->
+    <div class="row">
+        <!-- Burgers that have not been devoured -->
+        <div class="col-lg-6">
+            <h2>Burgers to DEVOUR!</h2>
+
+            <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <li>
+                        <button class="devourBtn btn btn-dark" data-id="{{id}}" type="button">
+                            {{ burger_name }}
+                        </button>             
+                    </li>
+                {{/unless}}
+            {{/each}}
+            </ul>
+        </div>
+
+        <!-- Burgers that have been devoured -->
+        <div class="col-lg-6">
+            <h2>Devoured burgers</h2>
+
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                        <li>
+                            {{burger_name}}
+                            
+                            <button data-id="{{id}}" class="deleteBtn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Add new burger -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="error">
+                <h1 class="newBurgerH1">Add a new burger!</h1>
+            </div>
+
+            <form class="newBurgerInfo">
+                <div class="input-group">
+                    <input type="text" class="burgerInput" name="burger_name" placeholder="Type the name of a burger">
+                
+                    <div class="input-group-append">
+                        <button type="submit" class="addBurger">Add Burger!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
